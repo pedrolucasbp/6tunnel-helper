@@ -1,0 +1,13 @@
+[Unit]
+Description = 6tunnel
+
+[Service]
+Type=simple
+Restart=always
+RemainAfterExit=yes
+User=root
+ExecStart=/etc/6tunnel/service/start.sh
+ExecStop=/etc/6tunnel/service/stop.sh
+
+[Install]
+WantedBy=multi-user.target
