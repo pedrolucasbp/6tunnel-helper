@@ -3,7 +3,7 @@
 
 readonly regex="^[0-9]+,.*,[0-9]+$"
 
-for conf_file in $(find /etc/6tunnel-helper/conf.d/ -type f -name "*.conf") 
+for conf_file in $(find /etc/6tunnel-helper/conf.d/ -type f -name "*.conf"); do
 
   OPTIONS="$(grep "OPTIONS" "${conf_file}" | cut -d "=" -f 2 | tr -d \")"
   
