@@ -1,0 +1,13 @@
+[Unit]
+Description = tunnel6-Helper
+
+[Service]
+Type=simple
+Restart=always
+RemainAfterExit=yes
+User=root
+ExecStart=/etc/tunnel6-helper/service/tunnel6-helper-start.sh
+ExecStop=/etc/tunnel6-helper/service/tunnel6-helper-stop.sh
+
+[Install]
+WantedBy=multi-user.target

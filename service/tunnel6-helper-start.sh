@@ -1,10 +1,10 @@
 #!/bin/env bash
 
-for conf_file in $(find /etc/6tunnel-helper/conf.d/ -type f -name "*.conf"); do
+for conf_file in $(find /etc/tunnel6-helper/conf.d/ -type f -name "*.conf"); do
 
   OPTIONS="$(grep "OPTIONS" "${conf_file}" | cut -d "=" -f 2 | tr -d \")"
   
-  for config in $(grep -E "^[0-9]+.*\,[0-9]+$" ${conf_file}); do
+  for config in $(grep -E "^[0-9]+\,.*\,[0-9]+$" ${conf_file}); do
 
     LOCAL_PORT=$(echo "${config}" | awk -F',' '{print $1}')
     TARGET_HOST=$(echo "${config}" | awk -F',' '{print $2}')
