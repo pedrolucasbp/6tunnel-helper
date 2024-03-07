@@ -1,6 +1,0 @@
-# local-port,target-host,target-port
-#
-# e.g.:
-# 80,my.domain.org,80
-# 80,192.168.178.99,80
-

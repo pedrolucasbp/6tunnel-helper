@@ -1,0 +1,6 @@
+# OPTIONS corresponds to 6tunnel options and must be written in quotation marks
+# local-port,target-host,target-port
+#
+# e.g.:
+# OPTIONS="-f"
+# 80,2001:db8::,80
